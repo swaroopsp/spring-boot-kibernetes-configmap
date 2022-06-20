@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-spring-boot-app
+  name: my-spring-boot-app
+spec:
+  selector:
+    matchLabels:
+      app: my-spring-boot-app
+  template:
+    metadata:
+      labels:
+        app: my-spring-boot-app
+      name: my-spring-boot-app
+    spec:
+      containers:
+        - env:
+            - name: database.username
+              valueFrom:
+                configMapKeyRef:
+                  name: my-config
+                  key: database.username
+          image: swaroopsp/jib-spring-boot-apps:latest
+          imagePullPolicy: IfNotPresent
+          name: my-spring-boot-app
+          ports:
+            - containerPort: 8080
+              protocol: TCP
