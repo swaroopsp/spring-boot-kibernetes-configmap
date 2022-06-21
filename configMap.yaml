@@ -4,4 +4,4 @@ metadata:
   creationTimestamp: null
   name: my-config
 data:
-  database.username: 111111hiya
+  database.username: From Dare

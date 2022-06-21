@@ -103,7 +103,7 @@
                 <version>${jib-maven-plugin.version}</version>
                 <configuration>
                     <to>
-                        <image>registry.hub.docker.com/swaroopsp/jib-spring-boot-apps</image>
+                        <image>registry.hub.docker.com/swaroopsp/jib-spring-boot-apps1</image>
                     </to>
 
                     <container>

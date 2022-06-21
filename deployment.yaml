@@ -21,7 +21,7 @@ spec:
                 configMapKeyRef:
                   name: my-config
                   key: database.username
-          image: swaroopsp/jib-spring-boot-apps:latest
+          image: swaroopsp/jib-spring-boot-apps1:latest
           imagePullPolicy: IfNotPresent
           name: my-spring-boot-app
           ports:
