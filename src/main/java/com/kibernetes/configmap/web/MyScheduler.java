@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Component
 @Slf4j
-public class ControllerMVC {
+public class MyScheduler {
 
 
     @Value("${database.username:defaultValue}")
@@ -23,9 +23,4 @@ public class ControllerMVC {
         log.warn("WARN LOG");
         log.error("ERROR LOG");
     }
-
-
-
-
-
 }
