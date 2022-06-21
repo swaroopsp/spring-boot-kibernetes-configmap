@@ -27,3 +27,5 @@
 # `kubectl delete daemonsets,replicasets,services,deployments,pods,rc,ingress --all --all-namespaces` - To delete pods
 
 # `kubectl delete configmap app-config     -n   default` - To delete config map
+
+# `kubectl delete service my-spring-boot-service' - To delete service
