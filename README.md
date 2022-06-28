@@ -29,3 +29,25 @@
 # `kubectl delete configmap app-config     -n   default` - To delete config map
 
 # `kubectl delete service my-spring-boot-service' - To delete service
+
+
+
+
+# Actuator
+##Request
+http://localhost:8080/actuator/loggers/com.kibernetes.configmap.web
+
+##response -
+{
+"configuredLevel": "INFO",
+"effectiveLevel": "INFO"
+}
+
+#Change log level
+##Request
+curl --location --request POST 'http://localhost:8080/actuator/loggers/com.kibernetes.configmap.web' \
+--header 'Content-Type: application/json' \
+--data-raw '{"configuredLevel": "DEBUG"}'
+
+##Response
+204
