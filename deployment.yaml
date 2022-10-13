@@ -5,6 +5,7 @@ metadata:
     app: my-spring-boot-app
   name: my-spring-boot-app
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: my-spring-boot-app
@@ -21,7 +22,7 @@ spec:
                 configMapKeyRef:
                   name: my-config
                   key: database.username
-          image: swaroopsp/jib-spring-boot-apps1:latest
+          image: swaroopsp/jib-spring-boot-app3:latest
           imagePullPolicy: IfNotPresent
           name: my-spring-boot-app
           ports:

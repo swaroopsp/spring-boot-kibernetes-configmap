@@ -16,11 +16,12 @@ public class MyController {
     protected String fromSystem;
 
     @GetMapping("/greeting")
-    public void greeting() {
+    public String greeting() {
         System.out.println(fromSystem);
         log.debug("DEBUG LOG");
         log.info("INFO LOG");
         log.warn("WARN LOG");
-        log.error("ERROR LOG");
+
+        return fromSystem;
     }
 }
